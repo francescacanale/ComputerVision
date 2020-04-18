@@ -1,4 +1,4 @@
-# ComputerVision
+# ComputerVision - Robotics Engineering 2018/2019
 Repository for Computer Vision Exercises
 
 * [Lab 01](https://github.com/francescacanale/ComputerVision/tree/master/Lab01) Image Warping and Bilinear Interpolation
