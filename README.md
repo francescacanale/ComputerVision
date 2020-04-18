@@ -20,5 +20,5 @@ Repository for Computer Vision Exercises
 | [Marco Giordano](https://github.com/MarcoGiordano95) | marcogiordano295@gmail.com |
 
 
-Robotics Engineering Master - 1st year   
-University of Genoa
+***Robotics Engineering Master - 1st year***   
+***University of Genoa***
