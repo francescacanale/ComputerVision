@@ -6,46 +6,44 @@ The goal of the lab is to understand and implement  the 8 points algorithm, to e
 Please, read carefully the text below before starting!
 
 ## Code
-1) 8 point algorithm function (version1)
-
+### 8 point algorithm function (version1)
 Write down a Matlab function function [F] = EightPointsAlgorithm(P1, P2) implementing the following steps:
 
-	1. Write down the matrix A (see the slides...)
-	2. Compute the SVD decomposition of A 
-	[U, D, V]=svd(A);
-	and select as solution f the last column of V.
-	Reshape column vector f so to obtain a matrix F (see function reshape)
-	3. Force the rank of F to be 2:
-		- Use again the SVD to decompose the matrix 
-		[U, D, V] = svd(F)
-		- Set D(3,3)=0
-		- Recompute the final F: F=U*D*VT.
+1) Write down the matrix A (see the slides...)
+2) Compute the SVD decomposition of A 
+[U, D, V]=svd(A);
+and select as solution f the last column of V.
+Reshape column vector f so to obtain a matrix F (see function reshape)
+3) Force the rank of F to be 2:
+	- Use again the SVD to decompose the matrix 
+	[U, D, V] = svd(F)
+	- Set D(3,3)=0
+	- Recompute the final F: F=U*D*VT.
 
-2) 8 point algorithm function (version2)
-
+### 8 point algorithm function (version2)
 Write down a Matlab function function [F] = EightPointsAlgorithmN(P1, P2) implementing the following steps:
 
-	1. Normalize the points using the function normalise2dpts provided.
-		- [nP1, T1] = normalise2dpts(P1)
+1) Normalize the points using the function normalise2dpts provided.
+	- [nP1, T1] = normalise2dpts(P1)
+	- [nP2, T2]=normalise2dpts(P2)
+2) Write down the matrix A (see the slides...)
+3) Compute the SVD decomposition of A 
+[U, D, V]=svd(A);
+and select as solution f the last column of V.
+Reshape column vector f so to obtain a matrix F (see function reshape)
+4) Force the rank of F to be 2:
+	- Use again the SVD to decompose the matrix 
+	[U, D, V] = svd(F)
+	- Set D(3,3)=0
+	- Recompute the final F: F=U*D*VT.
+5) De-normalize the resulting F as T2T*F*T1. This is your final F
 
-		- [nP2, T2]=normalise2dpts(P2)
-	2. Write down the matrix A (see the slides...)
-	3. Compute the SVD decomposition of A 
-	[U, D, V]=svd(A);
-	and select as solution f the last column of V.
-	Reshape column vector f so to obtain a matrix F (see function reshape)
-	4. Force the rank of F to be 2:
-		- Use again the SVD to decompose the matrix 
-		[U, D, V] = svd(F)
-		- Set D(3,3)=0
-		- Recompute the final F: F=U*D*VT.
-	5. De-normalize the resulting F as T2T*F*T1. This is your final F
-3) Prepare a script file 
+### Prepare a script file 
 You are requested to write down a Matlab script that includes the following functionalities:
 
-	1. Load the two sets of corresponding points and arrange them in two matrices P1 and P2 with 3 rows and N columns, where N is the number of corresponding points 
-	2. Call the function   for estimating the fundamental matrix F from P1 and P2
-	3. Visualize the results and evaluate your estimated F (see Evaluation of the results below)
+1) Load the two sets of corresponding points and arrange them in two matrices P1 and P2 with 3 rows and N columns, where N is the number of corresponding points 
+2) Call the function   for estimating the fundamental matrix F from P1 and P2
+3) Visualize the results and evaluate your estimated F (see Evaluation of the results below)
 
 
 ## Evaluation of the results
